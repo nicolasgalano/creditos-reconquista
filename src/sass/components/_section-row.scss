@@ -1,0 +1,189 @@
+.section-row {
+//DIVIDI CADA PARTE DEL DISEÑO EN UNA SECCION NUEVA
+    min-height:200px;
+    font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
+
+}
+.row-main{
+    position:relative;
+    .overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: rgba(0,0,0,0.1);
+        width:100%;
+        height: 100%;
+        z-index: 2;
+    }
+    .content{
+        position:absolute;
+        top:40vh;
+        right:80px;
+        z-index: 10;
+        .prestamo-link{
+            text-align: right;
+            p{
+                font-family: 'Ubuntu';
+                font-size:60px;
+                font-weight: 400;
+                color:#FFF;
+                text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            }
+            .btn{
+                background:#00bfa9;
+                font-weight: 400;
+                font-size:30px;
+                font-family:'Ubuntu';
+                margin:0;
+                border-radius:8px;
+                box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+                text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+                &:hover{
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+                }
+            }
+        }
+    }
+    .swiper-slide{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height:99vh;
+        width:100%;
+    }
+}
+
+.row-example{
+    position:relative;
+    padding: 100px 30px 100px;
+    background-color:#00bfa9;
+    p{
+        width:100%;
+        max-width:600px;
+        margin:0 auto;
+        font-family: 'Ubuntu';
+        font-size:40px;
+        font-weight: 400;
+        text-align: center;
+        color:#FFF;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        span{
+            display:block;
+            font-size:50px;
+            font-weight: 500;
+        }
+    }
+
+    i{
+        position:absolute;
+        color:rgba(255,255,255,0.7);
+        font-size: 60px;
+        text-shadow: 0 1px 8px rgba(0,0,0,0.1);
+        &.money-1{
+            top:20px;
+            left:20px;
+        }
+        &.money-2{
+            top:20px;
+            right:20px;
+        }
+        &.money-3{
+            bottom:20px;
+            left:20px;
+        }
+        &.money-4{
+            bottom:20px;
+            right:20px;
+        }
+    }
+}
+
+.row-reqs{
+    padding: 50px 30px 50px;
+    background-color:#0179b3;
+    h2{
+        font-family: 'Ubuntu';
+        font-size:40px;
+        font-weight: 400;
+        color:#FFF;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        text-align: left;
+        margin:20px 0 30px;
+    }
+    ul{
+        margin:0;
+        padding:0;
+        li{
+            margin:0;
+            padding:0 0 20px;
+            list-style: none;
+            width:50%;
+            float:left;
+            @media(max-width: 1000px){
+                width:100%;
+            }
+            i{
+                width:60px;
+                font-size:34px;
+                color:#FFF;
+                text-align: center;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            span{
+                position:relative;
+                top:-3px;
+                font-family: 'Ubuntu';
+                font-size:23px;
+                font-weight: 400;
+                letter-spacing: .5px;
+                color:#FFF;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+        }
+
+    }
+}
+
+.row-contact{
+    padding: 50px 30px 50px;
+    background:url(../images/contacto/bg.jpg) center center no-repeat;
+    background-size: cover;
+    h2{
+        font-family: 'Ubuntu';
+        font-size:40px;
+        font-weight: 400;
+        color:#FFF;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        text-align: left;
+        margin:20px 0 30px;
+    }
+
+    .caja{
+        display:inline-block;
+        text-align: center;
+        padding:0 30px;
+        color:#FFF;
+        font-family: 'Ubuntu';
+        font-size:20px;
+        font-weight: 300;
+        i{
+            border:4px solid #FFF;
+            border-radius: 40px;
+            width:68px;
+            height:68px;
+            text-align: center;
+            font-size:30px;
+            color:#FFF;
+            line-height: 62px;
+        }
+        span{
+            width:100%;
+            display:inline-block;
+        }
+        b{
+            width:100%;
+            display:inline-block;
+        }
+
+    }
+}

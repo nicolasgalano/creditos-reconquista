@@ -1,0 +1,100 @@
+extends layout
+
+block body
+    body.index
+    
+block header
+    include partials/header
+            
+block content
+    
+    .section-row.row-main
+        .overlay
+            
+        .content
+            
+            .prestamo-link.wow.fadeInRight(data-wow-duration="2s")
+                p Tu crédito en serio
+                a.btn(href="#") Solicitá tu crédito
+            
+        // Swiper
+        .swiper-container
+            .swiper-wrapper
+                
+                .swiper-slide(style="background-image:url('images/main/slider-1.jpg');")
+                
+                
+                .swiper-slide(style="background-image:url('images/main/slider-2.jpg');")
+                    
+                
+                .swiper-slide(style="background-image:url('images/main/slider-3.jpg');")
+                          
+    
+    .section-row.row-example
+        
+        p.wow.fadeInLeft ​Tenemos planes de <span>$5000 a $40.000</span> cuotas fijas de 3 a 12
+        
+        //i.fas.fa-money-bill-wave.money-1.wow.fadeInLeft
+        //i.fas.fa-money-bill-wave.money-2.wow.fadeInRight
+        //i.fas.fa-money-bill-wave.money-3.wow.fadeInUp
+        //i.fas.fa-money-bill-wave.money-4.wow.fadeInUp
+            
+        i.fas.fa-dollar-sign.money-1.wow.fadeInLeft
+        i.fas.fa-dollar-sign.money-2.wow.fadeInRight
+        i.fas.fa-dollar-sign.money-3.wow.fadeInUp
+        i.fas.fa-dollar-sign.money-4.wow.fadeInUp
+    
+    .section-row.row-reqs
+        .container
+            .row
+                .col-sm-12
+            
+                    h2.wow.fadeInUp Tenés que tener:
+                    
+                    ul.wow.fadeInUp.clearfix
+                        li
+                            i.far.fa-id-card
+                            span DNI Argentino
+                        li
+                            i.fas.fa-user-circle
+                            span Más de 18 años
+                        li
+                            i.fas.fa-briefcase
+                            span Antigüedad laboral mínima de 1 año
+                        li
+                            //i.fas.fa-university
+                            i.fas.fa-piggy-bank
+                            span Cuenta bancaria
+                        li
+                            //<i class="fas fa-file-invoice-dollar"></i>
+                            i.fas.fa-file-invoice-dollar
+                            span Ingreso mínimo de $15.000
+                        li
+                            i.fas.fa-mobile-alt
+                            span Teléfono celular
+                        li
+                            i.far.fa-envelope
+                            span Correo electrónico
+                    
+    .section-row.row-contact
+        .container
+            .row
+                .col-sm-12.col-md-5
+                    h2 Ante cualquier duda, estamos a tu disposición.
+                .col-sm-12.col-md-7
+                    .caja
+                        i.fas.fa-phone
+                        br
+                        span Teléfono
+                        br
+                        b 5217 5214
+                        
+                    .caja
+                        i.fas.fa-envelope
+                        br
+                        span Mail
+                        b info@creditosreconquista.com.ar
+        
+        
+        
+        
