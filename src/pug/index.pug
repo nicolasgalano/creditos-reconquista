@@ -8,50 +8,48 @@ block header
             
 block content
     
+    .loading.on#loading
+        .loader
+    
     .section-row.row-main
         .overlay
             
         .content
             
-            .prestamo-link.wow.fadeInRight(data-wow-duration="2s")
-                p Tu crédito en serio
-                a.btn(href="#") Solicitá tu crédito
+            .prestamo-link
+                p Tu préstamo hoy
+                a.btn.sticker#sticker(href="#") Solicitá tu crédito
+                a.btn.sticker.sticker2(href="#") Solicitá tu crédito
             
         // Swiper
         .swiper-container
             .swiper-wrapper
-                
-                .swiper-slide(style="background-image:url('images/main/slider-1.jpg');")
-                
-                
-                .swiper-slide(style="background-image:url('images/main/slider-2.jpg');")
-                    
-                
                 .swiper-slide(style="background-image:url('images/main/slider-3.jpg');")
-                          
-    
+                .swiper-slide(style="background-image:url('images/main/slider-2.jpg');")
+                .swiper-slide(style="background-image:url('images/main/slider-1.jpg');")
+        
     .section-row.row-example
         
-        p.wow.fadeInLeft ​Tenemos planes de <span>$5000 a $40.000</span> cuotas fijas de 3 a 12
+        p.wow.fadeInLeft(data-wow-duration="2s") ​Tenemos planes de <span>$5000 a $40.000</span> cuotas fijas de 3 a 12
         
         //i.fas.fa-money-bill-wave.money-1.wow.fadeInLeft
         //i.fas.fa-money-bill-wave.money-2.wow.fadeInRight
         //i.fas.fa-money-bill-wave.money-3.wow.fadeInUp
         //i.fas.fa-money-bill-wave.money-4.wow.fadeInUp
             
-        i.fas.fa-dollar-sign.money-1.wow.fadeInLeft
-        i.fas.fa-dollar-sign.money-2.wow.fadeInRight
-        i.fas.fa-dollar-sign.money-3.wow.fadeInUp
-        i.fas.fa-dollar-sign.money-4.wow.fadeInUp
+        i.fas.fa-dollar-sign.money-1.wow.fadeInLeft(data-wow-duration="2s")
+        i.fas.fa-dollar-sign.money-2.wow.fadeInRight(data-wow-duration="2s")
+        i.fas.fa-dollar-sign.money-3.wow.fadeInUp(data-wow-duration="2s")
+        i.fas.fa-dollar-sign.money-4.wow.fadeInUp(data-wow-duration="2s")
     
     .section-row.row-reqs
-        .container
+        .container-fluid
             .row
                 .col-sm-12
             
-                    h2.wow.fadeInUp Tenés que tener:
+                    h2.wow.fadeInUp(data-wow-duration="2s") Tenés que tener:
                     
-                    ul.wow.fadeInUp.clearfix
+                    ul.wow.fadeInUp.clearfix(data-wow-duration="2s")
                         li
                             i.far.fa-id-card
                             span DNI Argentino
@@ -77,24 +75,16 @@ block content
                             span Correo electrónico
                     
     .section-row.row-contact
-        .container
+        .container-fluid
             .row
-                .col-sm-12.col-md-5
-                    h2 Ante cualquier duda, estamos a tu disposición.
-                .col-sm-12.col-md-7
-                    .caja
+                .col-sm-12.col-md-6
+                
+                    h2.wow.fadeInLeft Ante cualquier duda, <br> estamos a tu disposición.
+                
+                .col-sm-12.col-md-6.cajas
+                    
+                    .caja.wow.fadeInRight
                         i.fas.fa-phone
-                        br
-                        span Teléfono
-                        br
                         b 5217 5214
-                        
-                    .caja
-                        i.fas.fa-envelope
-                        br
-                        span Mail
-                        b info@creditosreconquista.com.ar
-        
-        
         
         

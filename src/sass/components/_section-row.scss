@@ -4,6 +4,48 @@
     font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
 
 }
+
+.container-fluid{
+    max-width:1300px;
+}
+
+.loading{
+    //display:none;
+    opacity:0;
+    position: fixed;
+    top:-100%;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(255,255,255,0.97);
+    z-index: 40;
+    @include transition(all 1s ease);
+    .loader{
+      border: 16px solid #CCC;
+      border-radius: 50%;
+      border-top: 16px solid #0179b3;
+      width: 120px;
+      height: 120px;
+      margin: 45vh auto;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    &.on{
+        top:0;
+        opacity:1;
+    }
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 .row-main{
     position:relative;
     .overlay{
@@ -14,12 +56,21 @@
         width:100%;
         height: 100%;
         z-index: 2;
+        @media(max-width: 600px){
+            font-size:40px;
+            padding:0 20px;
+            text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+        }
     }
     .content{
         position:absolute;
-        top:40vh;
+        top:25vh;
         right:80px;
         z-index: 10;
+        @media(max-width: 760px){
+            right:auto;
+            width:100%;
+        }
         .prestamo-link{
             text-align: right;
             p{
@@ -28,35 +79,86 @@
                 font-weight: 400;
                 color:#FFF;
                 text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+                @media(max-width: 760px){
+                    width: 100%;
+                    text-align: center;
+                }
+                @media(max-width: 600px){
+                    font-size:40px;
+                    padding:0 20px;
+                    text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+                }
             }
             .btn{
                 background:#00bfa9;
                 font-weight: 400;
-                font-size:30px;
+                font-size:28px;
                 font-family:'Ubuntu';
                 margin:0;
                 border-radius:8px;
                 box-shadow: 0 3px 4px rgba(0,0,0,0.3);
                 text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+                width: auto !important;
+                padding: 6px 26px;
+                transition: all .5s;
+                &.sticker{
+                    display:inline-block;
+                    top:20px;
+                    right:50px;
+                }
+                &.sticker2{
+                    display:none;
+                    top:auto;
+                    right:auto;
+                }
+                @media(max-width: 760px){
+                    width: 92% !important;
+                    bottom: 20px;
+                    position: fixed;
+                    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.3);
+                    background-color: #00bf57;
+                    &.sticker{
+                        display:none;
+                    }
+                    &.sticker2{
+                        display:block;
+                        right: 4%;
+                    }
+                }
                 &:hover{
                     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
                 }
             }
+            .sticky-wrapper.is-sticky{
+                @media(max-width: 760px){
+                    display:none;
+                }
+            }
+            .sticky-wrapper.is-sticky .btn{
+                right: 30px;
+                background:#00bf6b;
+                box-shadow: 0 3px 18px rgba(0,0,0,0.3) !important;
+
+            }
+
         }
     }
     .swiper-slide{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        height:99vh;
+        height:60vh;
         width:100%;
     }
 }
 
 .row-example{
     position:relative;
-    padding: 100px 30px 100px;
+    min-height:39vh;
+    padding: 8vh 30px 8vh;
     background-color:#00bfa9;
+    //background:#00bfa9 url('../images/guillo.png') no-repeat;
+    //background-position: 0 0;
     p{
         width:100%;
         max-width:600px;
@@ -71,6 +173,12 @@
             display:block;
             font-size:50px;
             font-weight: 500;
+        }
+        @media(max-width: 650px){
+            font-size:30px;
+            span{
+                font-size:40px;
+            }
         }
     }
 
@@ -95,6 +203,9 @@
             bottom:20px;
             right:20px;
         }
+        @media(max-width: 650px){
+            display:none;
+        }
     }
 }
 
@@ -108,7 +219,7 @@
         color:#FFF;
         text-shadow: 0 3px 8px rgba(0,0,0,0.3);
         text-align: left;
-        margin:20px 0 30px;
+        margin:20px 0 40px;
     }
     ul{
         margin:0;
@@ -128,16 +239,25 @@
                 color:#FFF;
                 text-align: center;
                 text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                float: left;
+                @media(max-width: 650px){
+                    width:45px;
+                    font-size:30px;
+                }
             }
             span{
                 position:relative;
-                top:-3px;
+                top:2px;
                 font-family: 'Ubuntu';
                 font-size:23px;
                 font-weight: 400;
                 letter-spacing: .5px;
                 color:#FFF;
                 text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                @media(max-width: 650px){
+                    font-size:20px;
+                    letter-spacing: 0px;
+                }
             }
         }
 
@@ -145,7 +265,7 @@
 }
 
 .row-contact{
-    padding: 50px 30px 50px;
+    padding: 50px 30px 40px;
     background:url(../images/contacto/bg.jpg) center center no-repeat;
     background-size: cover;
     h2{
@@ -155,18 +275,23 @@
         color:#FFF;
         text-shadow: 0 3px 8px rgba(0,0,0,0.3);
         text-align: left;
-        margin:20px 0 30px;
+        margin:10px 0 10px;
     }
-
+    .cajas{
+        text-align: center;
+    }
     .caja{
         display:inline-block;
         text-align: center;
-        padding:0 30px;
+        padding:20px 30px;
         color:#FFF;
+        float: right;
         font-family: 'Ubuntu';
-        font-size:20px;
+        font-size:25px;
         font-weight: 300;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.3);
         i{
+            float: left;
             border:4px solid #FFF;
             border-radius: 40px;
             width:68px;
@@ -175,15 +300,54 @@
             font-size:30px;
             color:#FFF;
             line-height: 62px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            margin-bottom:10px;
+            margin-right:20px;
         }
         span{
             width:100%;
             display:inline-block;
+            padding: 10px 0 1px;
         }
         b{
-            width:100%;
-            display:inline-block;
+            /* width: 100%; */
+            display: inline-block;
+            float: left;
+            font-size: 60px;
+            line-height: 64px;
         }
-
+    }
+    @media(max-width: 992px){
+        h2{
+            text-align: center;
+        }
+        .caja{
+            float: none;
+        }
+    }
+    @media(max-width: 650px){
+        h2{
+            text-align: center;
+            font-size:25px;
+        }
+        .caja{
+            float: none;
+            i{
+                font-size:22px;
+                float:none;
+            }
+            b{
+                font-size: 40px;
+                line-height: 44px;
+                float:none;
+            }
+        }
+    }
+    @media(max-width: 408px){
+        .caja{
+            i{
+                margin-right:0;
+            }
+        }
     }
 }
